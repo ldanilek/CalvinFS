@@ -265,8 +265,8 @@ CHECK(other_sequence.pairs_size() != 0);
           header->set_from(tmachine()->machine_id());
           header->set_to(machine()->machine_id());
 
-          header->add_misc_int(action->distinct_id());
-          header->add_misc_int(action->involved_machines());
+          header->add_misc_int(new_action->distinct_id());
+          header->add_misc_int(new_action->involved_machines());
           header->set_type(Header::RPC);
           header->set_app("blocklog");
           header->set_rpc("CREATE_NEW");
